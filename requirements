@@ -1,4 +1,4 @@
 pandas
 streamlit
 sqlite3
-streamlit_extras==0.2.7
+streamlit-extras==0.2.7
