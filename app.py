@@ -2,12 +2,12 @@ import streamlit as st
 import pandas as pd
 import sqlite3
 
-st.image("src\imgs\logo.png")
+st.image("src/imgs/logo.png")
 st.header("DataFusion")
 
 # st.markdown("---", unsafe_allow_html = True)
 
-con = sqlite3.connect("data\data.db")
+con = sqlite3.connect("data/data.db")
 cur = con.cursor()
 
 tab_login, tab_create = st.tabs(["Login", "Create your account"])
