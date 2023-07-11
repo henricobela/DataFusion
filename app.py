@@ -2,6 +2,24 @@ import streamlit as st
 import pandas as pd
 import sqlite3
 
+
+st.set_page_config(initial_sidebar_state = "collapsed",
+                   page_icon = "src/imgs/logo.png",
+                   page_title = "DataFusion")
+
+st.markdown(
+    """
+        <style>
+            [data-testid="collapsedControl"] {
+                display: none
+            }
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+        </style>
+    """,
+    unsafe_allow_html = True)
+
+
 st.image("src/imgs/logo.png")
 st.header("DataFusion")
 
