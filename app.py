@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
+from streamlit_extras.switch_page_button import switch_page
 
 
 st.set_page_config(initial_sidebar_state = "collapsed",
@@ -27,6 +28,7 @@ st.header("DataFusion")
 
 con = sqlite3.connect("data/data.db")
 cur = con.cursor()
+can_pass = False
 
 tab_login, tab_create = st.tabs(["Login", "Create your account"])
 
@@ -52,6 +54,7 @@ if tab_login:
 
             if "auth" in globals():
                 if auth != False:
+                    can_pass = True
                     placeholder_login.empty()
                     st.success("Login authenticated!")
                 else:
@@ -84,5 +87,10 @@ if tab_create:
                     cur.execute(f"INSERT INTO usuarios (email,password) VALUES (?,?);", (email_create, password_create)).fetchall()
                     con.commit()                
                     st.success("Login created successfully!!!")
+
+
+if can_pass != False:
+    switch_page("dashboard_clientes")
+
 
 con.close()
