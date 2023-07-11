@@ -7,6 +7,6 @@ with col1:
         st.success("Uhul Expandiu")
 
 with col2:
-    with st.expander():
+    with st.expander("Expanda-me"):
         st.success("Uhul Expandiu 2 baloes vindooo")
         st.balloons()
