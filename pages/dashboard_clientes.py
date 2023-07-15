@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 def switch_page(page_name: str):
     from streamlit.runtime.scriptrunner import RerunData, RerunException
@@ -48,8 +49,11 @@ with col1:
     with st.expander("Expanda-me"):
         st.success("Uhul Expandiu")
         if st.button("Go Back"):
-            switch_page("app")
             st.balloons()
+            time.sleep(1)
+            switch_page("app")
+            
+            
 
 with col2:
     with st.expander("Expanda-me"):
