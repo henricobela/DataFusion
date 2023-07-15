@@ -49,6 +49,7 @@ with col1:
         st.success("Uhul Expandiu")
         if st.button("Go Back"):
             switch_page("app")
+            st.balloons()
 
 with col2:
     with st.expander("Expanda-me"):
