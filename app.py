@@ -112,7 +112,6 @@ if tab_create:
                     st.success("Login created successfully!!!")
 
 if "data" in globals():
-    
     st.dataframe(data)
 
 if can_pass != False:
