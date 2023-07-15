@@ -50,7 +50,7 @@ with col1:
         st.success("Uhul Expandiu")
         if st.button("Go Back"):
             st.balloons()
-            time.sleep(1)
+            time.sleep(1.5)
             switch_page("app")
             
             
