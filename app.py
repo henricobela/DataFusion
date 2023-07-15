@@ -111,7 +111,8 @@ if tab_create:
                     con.commit()                
                     st.success("Login created successfully!!!")
 
-st.dataframe(data)
+if "data" in globals():
+    st.dataframe(data)
 
 if can_pass != False:
     switch_page("dashboard_clientes")
